@@ -22,4 +22,6 @@ def get_last_id(file):
         return max(note['id'] for note in content)
     except FileNotFoundError:
         return 0
+    except ValueError:
+        return 0
 
